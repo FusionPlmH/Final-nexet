@@ -41,13 +41,11 @@ html {
 
 </style>
 
+<audio preload autoplay loop id="vd">
+     <source src="/bgm/bgm.mp3" type="audio/mpeg">
+</audio>
 
 <body>
-
-
-
-
-
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -374,8 +372,26 @@ function w3_close() {
     mySidebar.style.display = "none";
 }
 
+document.getElementById('auto').play()
+
 
 </script>
+
+<script type="text/javascript">
+    window.onload = function(){
+             setInterval("toggleSound()",100);
+        }
+
+    function toggleSound() {
+                var music = document.getElementById("vd");//獲取ID
+
+                if (music.paused) { //判讀是否播放
+                    music.paused=false;
+                    music.play(); //沒有就播放
+                }
+        }
+</script>
+
 
 </body>
 </html>
