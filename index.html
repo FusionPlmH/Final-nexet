@@ -18,7 +18,7 @@ body, html {
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
-
+  background-image: url('/images/star.jpg');
   background-size: cover;
   min-height: 100%;
 }
@@ -27,13 +27,6 @@ body, html {
   padding: 16px;
 }
 
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
 
 html {
   scroll-behavior: smooth;
@@ -41,9 +34,6 @@ html {
 
 </style>
 
-<audio preload autoplay loop id="vd">
-     <source src="/bgm/bgm.mp3" type="audio/mpeg">
-</audio>
 
 <body>
 
@@ -127,7 +117,7 @@ html {
       <h3>We know what you need.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>    </div>
     <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/images/IOT.jpeg" alt="Buildings" width="700" height="394">
+      <img class="w3-image w3-round-large" src="/images/design.png" alt="Buildings" width="700" height="394">
     </div>
     <p><a href="#team" class="w3-button w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-black">Check Out Our Team</a></p>
   </div>
@@ -321,21 +311,6 @@ function w3_close() {
 document.getElementById('auto').play()
 
 
-</script>
-
-<script type="text/javascript">
-    window.onload = function(){
-             setInterval("toggleSound()",100);
-        }
-
-    function toggleSound() {
-                var music = document.getElementById("vd");//獲取ID
-
-                if (music.paused) { //判讀是否播放
-                    music.paused=false;
-                    music.play(); //沒有就播放
-                }
-        }
 </script>
 
 
